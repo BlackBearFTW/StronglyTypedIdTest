@@ -1,0 +1,12 @@
+version: '3.9'
+
+name: dummy-todoapp
+
+services:
+  database:
+    container_name: todoapp-database
+    image: 'postgres:latest'
+    ports:
+      - 15432:5432
+    environment:
+      - POSTGRES_PASSWORD=todoapp
